@@ -9,11 +9,11 @@ Rakefile and generators to help create my baseapp
 
 FEATURES:
 --------
-Installs Blueprint css
-Replaces prototype with jrails
-Creates an application layout which includes Blueprint and jrails
-Defines `render_flashes` in application\_helper which will render a flash message when available
-Defines `current_page` helper to be used with will\_paginate
+Installs Blueprint css  
+Replaces prototype with jrails  
+Creates an application layout which includes Blueprint and jrails  
+Defines `render_flashes` in application\_helper which will render a flash message when available  
+Defines `current_page` helper to be used with will\_paginate  
 
     rake homeward
         Run all significant tasks
