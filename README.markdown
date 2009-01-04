@@ -47,12 +47,15 @@ Don't re-open classes to define methods, they need to be overwritable.
 REQUIREMENTS:
 --------
 * Rails
+* Haml
+* blueprint-css cloned somewhere on your filesystem
 
 INSTALL:
 --------
 1. `config.gem 'sandro-homeward', :lib => 'homeward', :source => 'http://gems.github.com'`
-2. `script/generate homeward`
-3. `rake homeward`
+2. Edit the BLUEPRINT_GIT_PATH constant in lib/tasks/homeward.rake
+3. `script/generate homeward`
+4. `rake homeward`
 
 LICENSE:
 --------
