@@ -1,6 +1,6 @@
 Homeward
 ==========
-by Sandro Turriate  
+by Sandro Turriate
 http://github.com/sandro/homeward
 
 DESCRIPTION:
@@ -9,11 +9,11 @@ Rakefile and generators to help create my baseapp
 
 FEATURES:
 --------
-Installs Blueprint css  
-Replaces Prototype with jQuery  
-Creates an application layout which includes Blueprint and jQuery  
-Includes a `render_flashes` application\_helper method which will render a flash message when available  
-Includes a `current_page` helper to be used with will\_paginate  
+Installs Blueprint css
+Replaces prototype with jrails
+Creates an application layout which includes Blueprint and jrails
+Defines `render_flashes` in application\_helper which will render a flash message when available
+Defines `current_page` helper to be used with will\_paginate
 
     rake homeward
         Run all significant tasks
@@ -21,22 +21,22 @@ Includes a `current_page` helper to be used with will\_paginate
         Update Blueprint
         Install Blueprint
         Replace prototype with jrails
-    
+
     rake homeward:application_layout
         Invokes the homeward_layout generator
-    
+
     rake homeward:blueprint:install
         installs blueprint
-    
+
     rake homeward:blueprint:update
         pulls the latest blueprint code
-    
+
     rake homeward:javascript:install_jrails
         installs jrails
-    
+
     rake homeward:javascript:remove_prototype
         removes prototype
-    
+
     rake homeward:javascript:use_jrails
         replaces prototype with jrails
 
