@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.description = %q{Personal rails methods I always use}
   s.email = %q{sandro.turriate@gmail.com}
   s.extra_rdoc_files = ["History.txt"]
-  s.files = ["History.txt", "Manifest.txt", "README.markdown", "Rakefile", "generators/homeward/USAGE", "generators/homeward/homeward_generator.rb", "generators/homeward/templates/homeward.rake", "generators/homeward_layout/USAGE", "generators/homeward_layout/homeward_layout_generator.rb", "generators/homeward_layout/templates/application.html.haml", "init.rb", "lib/homeward.rb", "lib/homeward/controllers/application.rb", "lib/homeward/helpers/application_helper.rb", "rails/init.rb", "spec/homeward_spec.rb", "spec/spec_helper.rb", "tasks/homeward.rake"]
+  s.files = ["History.txt", "Manifest.txt", "README.markdown", "Rakefile", "generators/homeward/USAGE", "generators/homeward/homeward_generator.rb", "generators/homeward/templates/homeward.rake", "generators/homeward_layout/USAGE", "generators/homeward_layout/homeward_layout_generator.rb", "generators/homeward_layout/templates/application.html.haml", "init.rb", "lib/homeward.rb", "lib/homeward/controllers/application.rb", "lib/homeward/helpers/application_helper.rb", "rails/init.rb", "spec/homeward_spec.rb", "spec/spec_helper.rb"]
   s.has_rdoc = true
   s.homepage = %q{http://github.com/sandro/homeward}
   s.rdoc_options = ["--main", "README.markdown"]

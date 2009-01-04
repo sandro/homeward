@@ -15,4 +15,3 @@ lib/homeward/helpers/application_helper.rb
 rails/init.rb
 spec/homeward_spec.rb
 spec/spec_helper.rb
-tasks/homeward.rake
