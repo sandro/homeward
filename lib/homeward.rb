@@ -22,7 +22,17 @@ module Homeward
 
     Dir.glob(search_me).sort.each {|rb| require rb}
   end
+
+  def self.define_method_unless_defined(klass, method_name, &block)
+    unless klass.method_defined?(method_name)
+      klass.send(:define_method, method_name, block)
+    end
+  end
 end
 
 Homeward.require_all_libs_relative_to(__FILE__)
+
+ActionView::Base.send(:include, Homeward::ViewHelpers)
+ActionController::Base.send(:include, Homeward::ControllerHelpers)
+
 
