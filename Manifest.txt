@@ -1,6 +1,6 @@
 History.txt
 Manifest.txt
-README.markdown
+README.rdoc
 Rakefile
 generators/homeward/USAGE
 generators/homeward/homeward_generator.rb

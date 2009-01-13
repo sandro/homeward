@@ -32,7 +32,7 @@ PROJ.email = 'sandro.turriate@gmail.com'
 PROJ.url = 'http://github.com/sandro/homeward'
 PROJ.version = Homeward::VERSION
 PROJ.rubyforge.name = 'homeward'
-PROJ.readme_file = 'README.markdown'
+PROJ.readme_file = 'README.rdoc'
 
 PROJ.spec.opts << '--color'
 
