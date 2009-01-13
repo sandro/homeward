@@ -1,2 +1,13 @@
+== 0.1.1 / 2009-01-12
+* 2 major enhancements
+  - Providing a mechanism for creating application specific settings via config/settings.yml. Access your settings via the APP_CONFIG constant
+  - The homeward generator creates all homeward files, including the application_layout; the homeward_layout generator has been removed
+
+* 3 minor enhancements
+  - View and Controller helpers now mixed-in to ActionView::Base and ActionController::Base [thanks tpope]
+  - Added config/initializers/constants.rb to the generator
+  - Added config/settings.yml and config/settings.yml.example to the generator
+    - Note: you should add config/settings.yml to your .gitignore
+
 == 0.1.0 / 2009-01-04
 * Birthday!

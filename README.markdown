@@ -12,18 +12,13 @@ FEATURES:
 Installs Blueprint css  
 Replaces prototype with jrails  
 Creates an application layout which includes Blueprint and jrails  
-Defines `render_flashes` in application\_helper which will render a flash message when available  
+Creates config/settings.yml for application specific settings  
+Creates config/initializers/constants.rb with an APP\_CONFIG constant which consists of the settings defined in config/settings.yml  
+Defines `render_flashes` which will render a flash message when available, utilized by the layout  
 Defines `current_page` helper to be used with will\_paginate  
 
     rake homeward
-        Run all significant tasks
-        Create application layout
-        Update Blueprint
-        Install Blueprint
-        Replace prototype with jrails
-
-    rake homeward:application_layout
-        Invokes the homeward_layout generator
+        Update and install Blueprint, replace prototype with jrails
 
     rake homeward:blueprint:install
         installs blueprint
@@ -40,20 +35,16 @@ Defines `current_page` helper to be used with will\_paginate
     rake homeward:javascript:use_jrails
         replaces prototype with jrails
 
-TODO/FIXES:
---------
-Don't re-open classes to define methods, they need to be overwritable.
-
 REQUIREMENTS:
 --------
 * Rails
 * Haml
-* blueprint-css cloned somewhere on your filesystem
+* blueprint-css cloned somewhere on your filesystem (see lib/tasks/homeward.rake)
 
 INSTALL:
 --------
 1. `config.gem 'sandro-homeward', :lib => 'homeward', :source => 'http://gems.github.com'`
-2. Edit the BLUEPRINT_GIT_PATH constant in lib/tasks/homeward.rake
+2. Edit the `BLUEPRINT_GIT_PATH` constant in lib/tasks/homeward.rake
 3. `script/generate homeward`
 4. `rake homeward`
 
