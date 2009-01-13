@@ -2,15 +2,15 @@
 
 Gem::Specification.new do |s|
   s.name = %q{homeward}
-  s.version = "0.1.0"
+  s.version = "0.1.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Sandro Turriate"]
-  s.date = %q{2009-01-04}
+  s.date = %q{2009-01-12}
   s.description = %q{Personal rails methods I always use}
   s.email = %q{sandro.turriate@gmail.com}
   s.extra_rdoc_files = ["History.txt"]
-  s.files = ["History.txt", "Manifest.txt", "README.markdown", "Rakefile", "generators/homeward/USAGE", "generators/homeward/homeward_generator.rb", "generators/homeward/templates/homeward.rake", "generators/homeward_layout/USAGE", "generators/homeward_layout/homeward_layout_generator.rb", "generators/homeward_layout/templates/application.html.haml", "init.rb", "lib/homeward.rb", "lib/homeward/controllers/application.rb", "lib/homeward/helpers/application_helper.rb", "rails/init.rb", "spec/homeward_spec.rb", "spec/spec_helper.rb"]
+  s.files = ["History.txt", "Manifest.txt", "README.markdown", "Rakefile", "generators/homeward/USAGE", "generators/homeward/homeward_generator.rb", "generators/homeward/templates/application.html.haml", "generators/homeward/templates/constants.rb", "generators/homeward/templates/homeward.rake", "generators/homeward/templates/settings.yml", "init.rb", "lib/homeward.rb", "lib/homeward/controller_helpers.rb", "lib/homeward/view_helpers.rb", "rails/init.rb", "spec/homeward_spec.rb", "spec/spec_helper.rb"]
   s.has_rdoc = true
   s.homepage = %q{http://github.com/sandro/homeward}
   s.rdoc_options = ["--main", "README.markdown"]
