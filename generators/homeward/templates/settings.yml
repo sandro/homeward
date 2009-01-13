@@ -1,0 +1,14 @@
+base_settings: &base_settings
+  :todo: development
+
+development:
+  <<: *base_settings
+
+test:
+  <<: *base_settings
+  :todo: test
+
+production:
+  <<: *base_settings
+  :todo: production
+

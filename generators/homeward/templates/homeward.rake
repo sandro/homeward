@@ -2,22 +2,10 @@ require 'fileutils'
 
 BLUEPRINT_GIT_PATH = "#{ENV['HOME']}/Code/Css/blueprint-css"
 
-desc %q(Run all significant tasks
-Create application layout
-Update Blueprint
-Install Blueprint
-Replace prototype with jrails
-)
-task :homeward => %w(homeward:application_layout homeward:blueprint:update homeward:blueprint:install homeward:javascript:use_jrails)
+desc %q(Update and install Blueprint, replace prototype with jrails)
+task :homeward => %w(homeward:blueprint:update homeward:blueprint:install homeward:javascript:use_jrails)
 
 namespace :homeward do
-  desc 'Invokes the homeward_layout generator'
-  task :application_layout do
-    Dir.chdir(Rails.root) do
-      puts %x(script/generate homeward_layout)
-    end
-  end
-
   namespace :blueprint do
     desc 'pulls the latest blueprint code'
     task :update do
