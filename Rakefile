@@ -33,6 +33,7 @@ PROJ.url = 'http://github.com/sandro/homeward'
 PROJ.version = Homeward::VERSION
 PROJ.rubyforge.name = 'homeward'
 PROJ.readme_file = 'README.rdoc'
+PROJ.gem.development_dependencies = []
 
 PROJ.spec.opts << '--color'
 
