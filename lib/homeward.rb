@@ -1,3 +1,5 @@
+require 'yaml'
+
 module Homeward
   VERSION = '0.1.0'
   LIBPATH = ::File.expand_path(::File.dirname(__FILE__)) + ::File::SEPARATOR
@@ -28,11 +30,24 @@ module Homeward
       klass.send(:define_method, method_name, block)
     end
   end
+
+  def self.load_app_config
+    returning HashWithIndifferentAccess.new do |app_config|
+      config_file_path = File.join(RAILS_ROOT, %w(config settings.yml))
+      if File.exist?(config_file_path)
+        config = YAML.load_file(config_file_path)
+        app_config.merge!(config[Rails.env]) if config.has_key?(Rails.env)
+      else
+        puts "WARNING: configuration file #{config_file_path} not found."
+      end
+    end
+  end
 end
 
 Homeward.require_all_libs_relative_to(__FILE__)
 
-ActionView::Base.send(:include, Homeward::ViewHelpers)
-ActionController::Base.send(:include, Homeward::ControllerHelpers)
-
+if Object.const_defined?(:Rails)
+  ActionView::Base.send(:include, Homeward::ViewHelpers)
+  ActionController::Base.send(:include, Homeward::ControllerHelpers)
+end
 
