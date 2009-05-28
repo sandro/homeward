@@ -16,7 +16,7 @@ class HomewardGenerator < Rails::Generator::Base
         mc.file 'homeward.rake', 'lib/tasks/homeward.rake'
 
         mc.template 'application.html.haml', 'app/views/layouts/application.html.haml'
-        mc.template 'constants.rb', 'config/initializers/constants.rb'
+        mc.template 'application_config.rb', 'config/initializers/application_config.rb'
         mc.template 'settings.yml', 'config/settings.yml'
         mc.template 'settings.yml', 'config/settings.yml.example'
       end
