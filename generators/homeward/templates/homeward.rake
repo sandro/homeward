@@ -1,28 +1,32 @@
 require 'fileutils'
+require 'open3'
 
-BLUEPRINT_GIT_PATH = "#{ENV['HOME']}/Code/Css/blueprint-css"
-
-desc %q(Update and install Blueprint, replace prototype with jrails)
-task :homeward => %w(homeward:blueprint:update homeward:blueprint:install homeward:javascript:use_jrails)
+BLUEPRINT_CLONE_URL = "git://github.com/joshuaclayton/blueprint-css.git"
+BLUEPRINT_PATH = "/tmp/blueprint-css"
 
 namespace :homeward do
+  desc %q(Update and install Blueprint, replace prototype with jrails)
+  task :install => %w(homeward:blueprint:update homeward:blueprint:install homeward:javascript:use_jrails)
+
   namespace :blueprint do
+    task :clone do
+      unless File.exists?(BLUEPRINT_PATH)
+        puts %x(git clone #{BLUEPRINT_CLONE_URL} #{BLUEPRINT_PATH})
+      end
+    end
+
     desc 'pulls the latest blueprint code'
-    task :update do
-      Dir.chdir BLUEPRINT_GIT_PATH do
-        puts %x(echo "Stashing\n" &&
-                git stash &&
-                echo "\nPulling\n" &&
-                git pull &&
-                echo "\nPopping\n" &&
-                git stash pop
-               )
+    task :update => :clone do
+      Dir.chdir BLUEPRINT_PATH do
+        Open3.popen3("git stash && git pull && git pop") do |stdin, stdout, stderr|
+          puts stdout.readlines.last
+        end
       end
     end
 
     desc "installs blueprint"
-    task :install do
-      compressor = "#{BLUEPRINT_GIT_PATH}/lib/compress.rb"
+    task :install => :clone do
+      compressor = "#{BLUEPRINT_PATH}/lib/compress.rb"
       install_path = "#{Rails.root}/public/stylesheets/blueprint"
       %x(ruby #{compressor} -o #{install_path})
       FileUtils.rm_rf "#{install_path}/src"
