@@ -43,9 +43,8 @@ namespace :homeward do
     desc 'installs jrails'
     task :install_jrails do
       Dir.chdir(Rails.root) do
-        puts %x(script/plugin install http://ennerchi.googlecode.com/svn/trunk/plugins/jrails)
+        puts %x(script/plugin install git://github.com/aaronchi/jrails.git)
       end
     end
   end
 end
-
