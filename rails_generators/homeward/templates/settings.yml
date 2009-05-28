@@ -1,14 +1,11 @@
 globals: &globals
-  :todo: development
+  project_name: <%= project_name %>
 
 development:
   <<: *globals
 
 test:
   <<: *globals
-  :todo: test
 
 production:
   <<: *globals
-  :todo: production
-
