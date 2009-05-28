@@ -1,14 +1,14 @@
-base_settings: &base_settings
+globals: &globals
   :todo: development
 
 development:
-  <<: *base_settings
+  <<: *globals
 
 test:
-  <<: *base_settings
+  <<: *globals
   :todo: test
 
 production:
-  <<: *base_settings
+  <<: *globals
   :todo: production
 
