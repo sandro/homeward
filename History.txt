@@ -1,3 +1,13 @@
+== 0.2.0 / 2009-06-01
+* 2 major enhancements
+  - Removed many methods in the Homeward namespace - Homeward is now simply a generator.
+  - Generated rake file loads its rake tasks from the gem
+
+* 3 minor enhancements
+  - APP_CONFIG is now APP_SETTINGS
+  - Running the Blueprint rake tasks clones the repo into /tmp unless its already present
+  - Jrails is installed from github
+
 == 0.1.1 / 2009-01-12
 * 2 major enhancements
   - Providing a mechanism for creating application specific settings via config/settings.yml. Access your settings via the APP_CONFIG constant
