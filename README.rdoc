@@ -16,7 +16,7 @@ Rakefile and generators to help create my baseapp
 * Defines render_flashes which will render a flash message when available, utilized by the layout
 * Defines current_page helper to be used with will\_paginate
 
-    rake homeward
+    rake homeward:install
         Update and install Blueprint, replace prototype with jrails
 
     rake homeward:blueprint:install
@@ -42,10 +42,9 @@ Rakefile and generators to help create my baseapp
 
 == INSTALL:
 
-  1. config.gem 'sandro-homeward', :lib => 'homeward', :source => 'http://gems.github.com'
-  2. Edit the BLUEPRINT_GIT_PATH constant in lib/tasks/homeward.rake
-  3. script/generate homeward
-  4. rake homeward
+  1. gem install sandro-homeward
+  2. script/generate homeward
+  3. rake homeward:install
 
 == LICENSE:
 
