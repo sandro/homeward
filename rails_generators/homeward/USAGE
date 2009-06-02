@@ -1,5 +1,4 @@
 Description:
   Adds the homeward rake task to lib/tasks/homeward.rake
   Copies the homeward application layout to app/views/layouts/application.html.haml
-  Creates application wide settings adding settings.yml to config/
-
+  Creates application wide settings in config/settings.yml
