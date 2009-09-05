@@ -15,6 +15,7 @@ class HomewardGenerator < Rails::Generator::Base
 
       m.with_options :collision => :ask do |mc|
         mc.file 'homeward.rake', 'lib/tasks/homeward.rake'
+        mc.file 'uri_ext.rb', 'lib/uri_ext.rb'
 
         mc.template 'application.html.haml', 'app/views/layouts/application.html.haml'
 

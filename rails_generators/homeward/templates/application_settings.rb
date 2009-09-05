@@ -1,4 +1,5 @@
 require 'ostruct'
+require 'uri_ext.rb'
 
 module ApplicationSettings
   extend self
