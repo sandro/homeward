@@ -1,8 +1,10 @@
 globals: &globals
   project_name: <%= project_name %>
+  host: localhost
 
 development:
   <<: *globals
+  host_port: 3000
 
 test:
   <<: *globals
