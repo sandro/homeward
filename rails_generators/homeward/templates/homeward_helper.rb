@@ -9,9 +9,9 @@ module HomewardHelper
     )
   end
 
-  def render_flashes
+  def render_flash
     flash.map do |type, value|
-      content_tag('div', value, :id => "flash_#{type}")
+      content_tag('div', value, :id => "flash", :class => type)
     end.join("\n")
   end
 end
