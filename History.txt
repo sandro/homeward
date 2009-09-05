@@ -1,3 +1,24 @@
+== 0.2.2 / 2009-09-05
+* enhancements
+  - APP_SETTINGS changed to ApplicationSettings module
+    module contains helpful methods for generating urls with appropriate ports
+    ApplicationSettings.host
+    ApplicationSettings.host_port
+    ApplicationSettings.host_with_port
+
+  - Removed init.rb and rails/init.rb
+    homeward is a bunch of generators not a rails plugin
+
+  - Renamed render_flashes to render_flash
+    Flash divs follow the convention of <div id="flash" class="notice">
+
+  - Removed the javascript variable AUTH_TOKEN
+    There are better ways to utilize the authenticity_token like: $('form').serialize();
+
+== 0.2.1 / 2009-06-13
+* bug fixes
+  - Properly namespace homeward.rake task
+
 == 0.2.0 / 2009-06-01
 * 2 major enhancements
   - Removed many methods in the Homeward namespace - Homeward is now simply a generator.
