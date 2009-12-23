@@ -38,4 +38,4 @@ module ApplicationSettings
   end
 end
 
-ApplicationSettings.build_from_yaml(File.join(RAILS_ROOT, %w(config settings.yml)))
+ApplicationSettings.build_from_yaml(File.join(RAILS_ROOT, 'config', 'settings.yml'))
