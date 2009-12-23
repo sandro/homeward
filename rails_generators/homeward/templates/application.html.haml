@@ -2,7 +2,7 @@
 %html
   %head
     %meta{"http-equiv" => 'Content-Type', :content => 'text/html;charset=utf-8'}
-    %title= h(@title || "<%= project_name %>")
+    %title= yield(:title) || "<%= project_name %>"
     = blueprint_stylesheets
     = stylesheet_link_tag 'application', :media => 'screen, projection'
     = javascript_include_tag %w(jquery jquery-ui jrails)
